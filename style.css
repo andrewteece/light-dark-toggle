@@ -1,11 +1,11 @@
 /* FONTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@900&display=swap');
 
 /* CSS CUSTOM PROPERTIES */
 
 :root {
-  --ff-headings: 'Oswald', sans-serif;
+  --ff-headings: 'Playfair Display', serif;
   --ff-body: 'Montserrat', sans-serif;
 
   --clr-light: hsl(62, 100%, 88%);
@@ -57,6 +57,124 @@ body {
 }
 
 .wrapper {
-  max-width: 56.25rem;
+  max-width: 68.75rem;
   margin: 0 auto;
+}
+
+/* INTRO */
+
+/*.intro {
+  height: 80svh;
+  padding: 10em 0;
+  display: grid;
+  grid-template-columns:
+    minmax(2em, 1fr)
+    minmax(80svh, 53.75rem) minmax(2em, 1fr);
+  background: linear-gradient(120deg, var(--clr-primary), var(--clr-secondary));
+  align-content: center;
+} */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8em;
+  background: linear-gradient(120deg, var(--clr-primary), var(--clr-secondary));
+}
+
+.intro__title {
+  font-family: var(--ff-headings);
+  font-size: calc(3rem + 5vw);
+  text-align: center;
+  margin: 0 0 0.25em;
+  padding-block: 0.5em;
+  line-height: 1;
+}
+
+.intro__subtitle {
+  text-align: center;
+}
+
+/* COMPONENTS */
+
+.btn--group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  margin: 2em 0;
+  position: relative;
+}
+.btn {
+  padding: 1em 2em;
+  text-transform: uppercase;
+  border-radius: 8px;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+.btn + .btn {
+  margin-left: 1em;
+}
+
+.btn--accent {
+  background: var(--clr-accent);
+  color: var(--foreground);
+}
+
+.btn--accent:hover,
+.btn--accent:focus {
+  background: var(--foreground);
+  color: var(--clr-accent);
+  transition: all 400ms ease-in-out;
+}
+
+.btn--secondary {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus {
+  background: var(--background);
+  color: var(--foreground);
+  transition: all 400ms ease-in-out;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: var(--foreground) 2px solid;
+  left: -4px;
+  top: 4px;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* TOGGLE */
+
+.darkmode--toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1em;
+  right: 1em;
+  width: 30px;
+  height: 30px;
+  color: var(--foreground);
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.click--here {
+  position: absolute;
+  top: 3em;
+  right: 1.5em;
+  width: 6.25rem;
 }
