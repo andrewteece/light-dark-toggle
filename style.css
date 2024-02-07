@@ -1,0 +1,62 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@700&display=swap');
+
+/* CSS CUSTOM PROPERTIES */
+
+:root {
+  --ff-headings: 'Oswald', sans-serif;
+  --ff-body: 'Montserrat', sans-serif;
+
+  --clr-light: hsl(62, 100%, 88%);
+  --clr-dark: hsl(169, 100%, 10%);
+  --clr-primary: hsl(83, 100%, 82%);
+  --clr-secondary: hsl(169, 90%, 88%);
+  --clr-accent: hsl(13, 100%, 66%);
+
+  --foreground: var(--clr-dark);
+  --background: var(--clr-light);
+
+  .darkmode {
+    --clr-light: hsl(62, 100%, 88%);
+    --clr-dark: hsl(169, 100%, 10%);
+    --clr-primary: hsl(65, 89%, 7%);
+    --clr-secondary: hsl(169, 100%, 3%);
+    --clr-accent: hsl(13, 100%, 66%);
+
+    --foreground: var(--clr-light);
+    --background: var(--clr-dark);
+  }
+}
+
+/* CSS RESET */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* BODY */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--ff-body);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.wrapper {
+  max-width: 56.25rem;
+  margin: 0 auto;
+}
